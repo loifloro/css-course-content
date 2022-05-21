@@ -1,0 +1,114 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Ruda&display=swap');
+
+/* 
+Primary Font: Montserrat
+Secondary: Ruda
+
+Dark Gray: rgb(39, 41, 43)
+Light Gray: rgb(50, 50, 50)
+
+Neon Green: rgb(157, 255, 0)
+Light Neon Green: rgb(185, 255, 73)
+*/
+
+html {
+   animation: animation 2s ease-in-out; 
+   -moz-animation: animation 1s ease-in-out; 
+   -o-animation: animation 1s ease-in-out; 
+   -webkit-animation: animation 1s ease-in-out; 
+}
+
+h1 , h2 {
+    font-family: Montserrat, sans-serif;
+    color: rgb(39, 41, 43);
+}
+
+p , li , a{
+    font-family: Ruda, serif;
+    color: rgb(50, 50, 50);
+}
+
+a {
+    text-decoration: none;
+    font-size: .7em;
+    transition: all 0.5s ease-in-out;
+}
+
+a:hover {
+    font-size: 1em;
+    color: rgb(39, 41, 43);
+}
+
+img {
+    width: 150px;
+    height: 150px;
+    filter: grayscale();
+    transition: all 0.5s ease-in-out;
+}
+
+img:hover {
+    width: 200px;
+    height: 200px;
+
+    filter: none;
+}
+
+#main {
+    display: grid;
+    grid: none / 80% 20%;
+}
+
+.content {
+    margin-inline-start: 10px;
+}
+
+#image-1 {
+    float: right;
+    height: 250px;
+    width: auto;
+    margin: 15px;
+}
+
+.sidebar {
+    background: rgba(185, 255, 73, .2);
+    margin: 5px 10px;
+    padding: 15px 15px;
+    border-radius: 10px;
+    /* height: min-content; */
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.post {
+    border: 1px solid rgb(157, 255, 0);
+    /* margin: 5px none; */
+    padding: 5px 10px;
+}
+
+.image-grid {
+    padding-inline-start: 25px;
+
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+}
+
+.image-grid img {
+    margin: 5px 10px;
+    flex: 0 1 auto;
+}
+
+@keyframes animation {
+    from { 
+        opacity: 0;
+        background: black;
+    }
+    to {
+        opacity: 1;
+        background: none;
+    }
+}
